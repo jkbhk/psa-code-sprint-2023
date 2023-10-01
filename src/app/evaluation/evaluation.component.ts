@@ -60,7 +60,7 @@ export class EvaluationComponent {
     let total:number = 0;
     this.selectedUser?.evaluation.topics.forEach((evaltopic:EvaluationTopic, name:string)=>{
       let score:number = evaltopic.score;
-      total += score;
+      total = +total + +evaltopic.score;  
     });
     return total; 
   }
