@@ -43,11 +43,14 @@ export class EvaluationComponent {
         console.log(this.updatedScores[i])
       }
       let temp = 0;
+      let total = 0;
       this.selectedUser.evaluation.topics.forEach((evaltopic:EvaluationTopic, name:string)=>{
         console.log(name + " " + this.updatedScores[temp])
         evaltopic.score = this.updatedScores[temp];
+        total = +total + +evaltopic.score;
         temp++; 
       });
+      this.selectedUser.evaluation.totalScore = total;
       this.dataService.updateUser(this.selectedUser);
     }
 
