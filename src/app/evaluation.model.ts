@@ -15,4 +15,10 @@ export class Evaluation {
 
         this.remarks = "";
     }
+
+    setScore(topicName:string, score:number){
+        if(this.topics.has(topicName)){
+            this.topics.get(topicName)!.score = score;
+        }
+    }
 }
