@@ -9,10 +9,15 @@ import { User } from '../user.model';
 })
 export class CourseTrackerComponent {
 
-  users: Map<string,User>;
+  courses;
 
   constructor(private dataService:DataService){
-    this.users = this.dataService.getAllUsers()
+    this.courses = dataService.currentUser?.courses;
+    console.log(this.courses);
+  }
+
+  public getAllCourses(){
+
   }
 
 
