@@ -23,5 +23,17 @@
   </nav>
 
 
+  <!--Sidebar-->
+    <!-- <aside class="column is-2 is-narrow-mobile is-fullheight section is-hidden-mobile"> -->
+    <aside class="menu" *ngIf="showSideNav">
+      <ul class="menu-list">
+        <li>
+          <a href="/evaluation-head">Evaluation</a>
+        </li>
+        <li>
+          <a href="/course-tracker">Skills</a>
+        </li>
+      </ul>
+    </aside>
 
 <router-outlet></router-outlet>

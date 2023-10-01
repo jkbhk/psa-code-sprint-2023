@@ -21,6 +21,7 @@ export class DataService {
 
   setCurrentUser(user:User){
     this.currentUser = user;
+    console.log("sett");
   }
 
   getAllUsers(){

@@ -19,6 +19,8 @@ export class EvaluationComponent {
   constructor(private dataService:DataService){
     this.isEvaluating = false;
     this.retrieveUsers();
+
+    console.log(dataService.currentUser);
   }
 
   public selectUser(user:User){
