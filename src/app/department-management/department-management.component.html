@@ -1,12 +1,12 @@
 <div class="department-management">
     <table class="table is-bordered is-narrow is-hoverable">
         <tr>
-            <th>Head of IT</th>
-            <th>Status</th>
+            <th>Head of IT - Charlie</th>
+            <th>Evaluation Score</th>
         </tr>
         <tr *ngFor="let em of managed">
             <td>{{dataService.getUserByEmail(em)?.name}}</td>
-            <td>Submitted</td>
+            <td>{{dataService.getUserByEmail(em)?.evaluation?.totalScore}}</td>
      
         </tr>
     </table>

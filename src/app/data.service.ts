@@ -20,13 +20,10 @@ export class DataService {
     
     this.createUser("Harry","harry@gmail.com","Employee");
     this.createUser("Jenny","jenny@gmail.com","Employee");
-    this.createUser("Kat","kat@gmail.com","Employee");
-    this.createUser("Lily","lily@gmail.com","Employee");
-    this.createUser("Mark","mark@gmail.com","Employee");
 
     // department head
     let charlie = new User("charlie@gmail.com","Charlie","Department Head");
-    charlie.managing.push("alice@gmail.com","harry@gmail.com","jenny@gmail.com","kat@gmail.com","lily@gmail.com","mark@gmail.com");
+    charlie.managing.push("alice@gmail.com","harry@gmail.com","jenny@gmail.com");
     this.users.set(charlie.email,charlie);
 
   }

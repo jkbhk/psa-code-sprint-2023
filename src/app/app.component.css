@@ -32,6 +32,7 @@ body{
 }
 
 .description{
+    z-index: 1;
     width: 450px;
     margin: 140px 120px;
     line-height: 2;
@@ -46,7 +47,7 @@ body{
 	position: absolute;
 	right: 0;
 	top: 0;
-    opacity: 0.4;
+    opacity: 0.7;
     box-shadow:0px 0px 20px 10px whitesmoke;
 }
 

@@ -1,5 +1,5 @@
 <div class="course-tracker">
-  <h1 class="title is-4">Grades</h1>
+  <h1 class="title is-4">Courses</h1>
   <div class="grades-container">
     <table class="table is-bordered is-narrow">
       <tr>
@@ -9,7 +9,7 @@
       <tr *ngFor="let course of courses | keyvalue; let i =index">
         <td>{{course.value.name}}</td>
         <td>{{course.value.status}}</td>
-      </tr>
+      </tr> 
     </table>
   </div>
 </div>
