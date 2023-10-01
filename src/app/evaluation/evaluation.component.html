@@ -12,16 +12,17 @@
           <table>
             <tr>
                 <th>{{selectedUser.name}}</th>
-                <th><button class="button is-info evaluate" (click)="evaluateUser(selectedUser)">Evaluate</button></th>
+                <th><button class="button is-info evaluate" (click)="evaluateUser(selectedUser)">{{getEvaluateButtonText()}}</button></th>
             </tr>
-            <tr *ngFor="let topic of selectedUser?.evaluation?.topics | keyvalue">
+            <tr *ngFor="let topic of selectedUser?.evaluation?.topics | keyvalue; let i =index">
               <td>{{topic.value.name}}</td>
-              <td class="score">{{topic.value.score}}/5</td>
+              <td *ngIf="!isEvaluating" class="score">{{topic.value.score}}/{{topic.value.maxScore}}</td>
+              <td *ngIf="isEvaluating" class="score"><input [(ngModel)]="updatedScores[i]"/></td>
             </tr>
-            <tr>
+            <tr>  
                 <td>Overall</td>
                 <!-- <td>{{selectedUser.evaluation.remarks!="" ? selectedUser.evaluation.remarks : "No remarks"}}</td> -->
-                <td class="score">{{calculateTotal()}}/25</td>
+                <td class="score">{{calculateTotal()}}/{{calculateMax()}}</td>
             </tr>
           </table>
 
