@@ -14,9 +14,10 @@ export class DataService {
 
   constructor() { 
     // init mock data
-    this.createUser("Alice","alice@gmail.com");
-    this.createUser("Bob","bob@gmail.com");
-    this.createUser("Charlie","charlie@gmail.com");
+    //alert("CRATED")
+    this.createUser("Alice","alice@gmail.com","HR");
+    this.createUser("Bob","bob@gmail.com","Employee");
+    this.createUser("Charlie","charlie@gmail.com","Department Head");
   }
 
   setCurrentUser(user:User){
@@ -32,8 +33,8 @@ export class DataService {
     return this.users.get(email);
   }
 
-  createUser(name:string, email:string ){
-      let user = new User(email,name);
+  createUser(name:string, email:string, role:string ){
+      let user = new User(email,name,role);
       this.users.set(email, user);
       
   }

@@ -25,7 +25,7 @@
 
   <!--Sidebar-->
     <!-- <aside class="column is-2 is-narrow-mobile is-fullheight section is-hidden-mobile"> -->
-    <aside class="menu" *ngIf="showSideNav">
+    <aside class="menu" *ngIf="dataService.currentUser != undefined">
       <ul class="menu-list">
         <li>
           <a href="/evaluation-head">Evaluation</a>

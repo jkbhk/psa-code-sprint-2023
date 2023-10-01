@@ -35,7 +35,7 @@ export class EvaluationComponent {
 
   evaluateUser(user:User){
     console.log("LOGGINGN SCORES");
-    if(this.isEvaluating){
+    if(this.selectedUser && this.isEvaluating){
       for(let i = 0;i<this.updatedScores.length;i++){
         if(this.updatedScores[i] == undefined){
           this.updatedScores[i] = 0;
@@ -43,11 +43,12 @@ export class EvaluationComponent {
         console.log(this.updatedScores[i])
       }
       let temp = 0;
-      this.selectedUser?.evaluation.topics.forEach((evaltopic:EvaluationTopic, name:string)=>{
+      this.selectedUser.evaluation.topics.forEach((evaltopic:EvaluationTopic, name:string)=>{
         console.log(name + " " + this.updatedScores[temp])
         evaltopic.score = this.updatedScores[temp];
         temp++; 
       });
+      this.dataService.updateUser(this.selectedUser);
     }
 
     this.isEvaluating = !this.isEvaluating;
