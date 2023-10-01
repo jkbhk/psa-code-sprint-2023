@@ -28,10 +28,10 @@
     <aside class="menu" *ngIf="dataService.currentUser != undefined">
       <ul class="menu-list">
         <li>
-          <a href="/evaluation-head">Evaluation</a>
+          <a [routerLink]="['/evaluation-head']">Evaluation</a>
         </li>
         <li>
-          <a href="/course-tracker">Skills</a>
+          <a [routerLink]="['/course-tracker']">Skills</a>
         </li>
       </ul>
     </aside>
