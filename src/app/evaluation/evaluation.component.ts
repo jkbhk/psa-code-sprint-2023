@@ -13,6 +13,8 @@ export class EvaluationComponent {
 
   constructor(private dataService:DataService){
     this.retrieveUsers();
+
+    console.log(dataService.currentUser);
   }
 
   public selectUser(user:User){

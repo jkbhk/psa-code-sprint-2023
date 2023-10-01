@@ -14,8 +14,8 @@
     <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-info" href="/login">
-              <strong>Sign in</strong>
+            <a *ngIf="dataService.currentUser==undefined" class="button is-info" href="/login">
+              <strong>Sign In</strong>
             </a>
           </div>
         </div>
@@ -23,5 +23,17 @@
   </nav>
 
 
+  <!--Sidebar-->
+    <!-- <aside class="column is-2 is-narrow-mobile is-fullheight section is-hidden-mobile"> -->
+    <aside class="menu" *ngIf="showSideNav">
+      <ul class="menu-list">
+        <li>
+          <a href="/evaluation-head">Evaluation</a>
+        </li>
+        <li>
+          <a href="/course-tracker">Skills</a>
+        </li>
+      </ul>
+    </aside>
 
 <router-outlet></router-outlet>

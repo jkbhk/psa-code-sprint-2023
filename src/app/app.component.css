@@ -1,3 +1,21 @@
 .navbar{
     background-color: #5E60CE;
+    z-index: 1;
+}
+
+.menu{
+    background-color: #560187;
+    width:150px;
+    height: 100vh;
+    float: left;
+    z-index: 2;
+}
+
+a{
+    color:white;
+}
+
+a:hover{
+    background-color: #3e8ed0;
+    color: white;
 }

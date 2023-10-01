@@ -13,13 +13,14 @@ export class LoginComponent {
   }
 
   authenticate(){
-    let user = this.dataService.getUserByEmail("bob@gmail.com");
-    if(user){
-      this.dataService.setCurrentUser(user);
-      window.location.href="/evaluation-head";
-    }else{
-      alert("invalid user");
-    }
+    // let user = this.dataService.getUserByEmail("bob@gmail.com");
+    // if(user){
+    //   this.dataService.setCurrentUser(user);
+    //   window.location.href="/evaluation-head";
+    // }else{
+    //   alert("invalid user");
+    // }
+    window.location.href="/evaluation-head";
   }
 
   test(){   

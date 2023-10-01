@@ -9,8 +9,15 @@ import { User } from './user.model';
 })
 export class AppComponent {
   title = 'hrintel';
+  showSideNav = false;
+  loggedIn = false;
 
   constructor(public dataService:DataService){
-    
+    //show sign in button if user not sign in
+
+    //show side nav if not at homepage or sign in page
+    if(window.location.href!=='http://localhost:4200/' && window.location.href !== 'http://localhost:4200/login'){
+      this.showSideNav = true;
+    }
   }
 }
