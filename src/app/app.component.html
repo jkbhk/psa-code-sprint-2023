@@ -1,6 +1,6 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" href="">
+      <a class="navbar-item" [routerLink]="['/']">
         <img src="assets/images/psa_logo.png" alt="PSA logo" width="70" height="300">
       </a>
     </div>
@@ -8,7 +8,7 @@
     <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <a *ngIf="dataService.currentUser==undefined && router.url==='/'" class="button is-info" href="/login">
+            <a *ngIf="router.url==='/'" class="button is-info" href="/login">
               <strong>Sign in</strong>
             </a>
           </div>
@@ -19,7 +19,7 @@
 
   <!--Sidebar-->
     <!-- <aside class="column is-2 is-narrow-mobile is-fullheight section is-hidden-mobile"> -->
-    <aside class="menu" *ngIf="dataService.currentUser != undefined">
+    <aside class="menu" *ngIf="dataService.currentUser != undefined && router.url!=='/'">
       <ul class="menu-list">
         <li>
           <a [routerLink]="['/dashboard']">Dashboard</a>
@@ -36,10 +36,24 @@
       </ul>
     </aside>
 
-    <div *ngIf="isHomePage" class="description w3-animate-bottom"><p><b>Transform your HR processes with our dynamic Performance Management Portal.</b>
+    <div *ngIf="router.url==='/'" class="description w3-animate-bottom"><p><b>Transform your HR processes with our dynamic Performance Management Portal.</b>
     </p></div>
 
-    <div *ngIf="isHomePage" class="animation-wrapper">
+    <div *ngIf="router.url==='/'" class="animation-wrapper homepage">
+      <div class="water">
+        <ul class="waves">
+          <li class="wave-one" style="background-image: url('https://i.postimg.cc/7LtCC11Y/wave1.png');"></li>
+          <li class="wave-two" style="background-image: url('https://i.postimg.cc/P5hv05rh/wave2.png');"></li>
+          <li class="wave-three" style="background-image: url('https://i.postimg.cc/63Dyc91k/wave3.png');"></li>
+          <li class="wave-four" style="background-image: url('https://i.postimg.cc/1tg8DgM0/wave4.png');"></li>
+        </ul>
+      </div>
+      <div class="boat" style="background-image: url('https://i.postimg.cc/GmQTRnHD/boat2.png');"></div>
+      <div class="cloud" style="background-image: url('https://i.postimg.cc/VNkrLZCV/cloud-md.png');"></div>
+      <div class="cloud2" style="background-image: url('https://i.postimg.cc/VNkrLZCV/cloud-md.png');"></div>
+    </div>
+
+    <div *ngIf="router.url!=='/'" class="animation-wrapper not-homepage">
       <div class="water">
         <ul class="waves">
           <li class="wave-one" style="background-image: url('https://i.postimg.cc/7LtCC11Y/wave1.png');"></li>

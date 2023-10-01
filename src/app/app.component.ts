@@ -10,10 +10,11 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'hrintel';
-  isHomePage = false;
+
 
   constructor(public dataService:DataService, public router:Router){
     //show sign in button if user not sign in
+    
 
   }
 }

@@ -47,8 +47,17 @@ body{
 	position: absolute;
 	right: 0;
 	top: 0;
-    opacity: 0.7;
-    box-shadow:0px 0px 20px 10px whitesmoke;
+	box-shadow:0px 0px 20px 10px whitesmoke;
+}
+
+.animation-wrapper.homepage{
+	z-index:-3;
+	opacity: 0.7;
+}
+
+.animation-wrapper.not-homepage{
+	z-index:-3;
+	opacity: 0.2;
 }
 
 .water{
