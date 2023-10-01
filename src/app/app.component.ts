@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { DataService } from './data.service';
 import { User } from './user.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -11,9 +12,8 @@ export class AppComponent {
   title = 'hrintel';
   isHomePage = false;
 
-  constructor(public dataService:DataService){
-    if (window.location.href=='http://localhost:4200/'){
-      this.isHomePage = true;
-    }
+  constructor(public dataService:DataService, public router:Router){
+    //show sign in button if user not sign in
+
   }
 }
