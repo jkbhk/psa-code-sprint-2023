@@ -36,6 +36,12 @@ body {
 
   button{
     width:350px;
+    background-color: #5e60ce!important;
+    color:white;
+  }
+
+  button:hover{
+    background-color: #6769e0!important;
   }
 
 .bg-image {
@@ -44,3 +50,4 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
 }
+

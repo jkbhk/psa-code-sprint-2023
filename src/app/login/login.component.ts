@@ -17,12 +17,10 @@ export class LoginComponent {
     let user = this.dataService.getUserByEmail("bob@gmail.com");
     if(user){
       this.dataService.setCurrentUser(user);
-      //window.location.href="/evaluation-head";
-      this.router.navigate(['/evaluation-head']);
+      this.router.navigate(['/dashboard']);
     }else{
       alert("invalid user");
     }
-    //window.location.href="/evaluation-head";
   }
 
   test(){   

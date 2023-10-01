@@ -9,9 +9,11 @@ import { User } from './user.model';
 })
 export class AppComponent {
   title = 'hrintel';
+  isHomePage = false;
 
   constructor(public dataService:DataService){
-    //show sign in button if user not sign in
-
+    if (window.location.href=='http://localhost:4200/'){
+      this.isHomePage = true;
+    }
   }
 }

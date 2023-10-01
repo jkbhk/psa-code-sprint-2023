@@ -5,9 +5,11 @@ import { LoginComponent } from './login/login.component';
 import { EvaluationComponent } from './evaluation/evaluation.component';
 import { CourseTrackerComponent } from './course-tracker/course-tracker.component';
 import { DepartmentManagementComponent } from './department-management/department-management.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {path:'login', component: LoginComponent},
+  {path:'dashboard', component: DashboardComponent},
   {path:'evaluation-head', component: EvaluationComponent},
   {path:'course-tracker', component: CourseTrackerComponent},
   {path:'department-management', component: DepartmentManagementComponent}

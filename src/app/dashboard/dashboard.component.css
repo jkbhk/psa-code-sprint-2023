@@ -1,0 +1,12 @@
+.dashboard{
+    margin: 35px; 
+    margin-left: 220px; 
+}
+
+table{
+    width:50%;
+}
+
+td:hover{
+    background-color: #5E60CE20;
+}

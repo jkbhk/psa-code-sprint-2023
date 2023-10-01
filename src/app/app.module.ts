@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { EvaluationComponent } from './evaluation/evaluation.component';
 import { CourseTrackerComponent } from './course-tracker/course-tracker.component';
 import { DepartmentManagementComponent } from './department-management/department-management.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { DepartmentManagementComponent } from './department-management/departmen
     EvaluationComponent,
     CourseTrackerComponent,
     DepartmentManagementComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,

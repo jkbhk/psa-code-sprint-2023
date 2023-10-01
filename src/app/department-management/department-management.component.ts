@@ -11,7 +11,6 @@ export class DepartmentManagementComponent {
   managed;
 
   constructor(public dataService:DataService){
-    alert("asfsda")
     this.managed = dataService.getDepartmentHead()?.managing
     this.managed!.forEach(element => {
       console.log(element);

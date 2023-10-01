@@ -2,10 +2,11 @@
     <table class="table is-bordered is-narrow is-hoverable">
         <tr>
             <th>Head of IT</th>
-            <th></th>
+            <th>Status</th>
         </tr>
-        <tr>
-            <td *ngFor="let em of managed">{{dataService.getUserByEmail(em)?.name}}</td>
+        <tr *ngFor="let em of managed">
+            <td>{{dataService.getUserByEmail(em)?.name}}</td>
+            <td>Submitted</td>
      
         </tr>
     </table>

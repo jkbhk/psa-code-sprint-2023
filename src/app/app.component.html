@@ -3,12 +3,6 @@
       <a class="navbar-item" href="">
         <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: Free, open source, and modern CSS framework based on Flexbox" width="112" height="28">
       </a>
-  
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
     </div>
 
     <div class="navbar-end">
@@ -28,12 +22,35 @@
     <aside class="menu" *ngIf="dataService.currentUser != undefined">
       <ul class="menu-list">
         <li>
+          <a [routerLink]="['/dashboard']">Dashboard</a>
+        </li>
+        <li *ngIf="dataService.currentUser.role=='HR'">
+          <a [routerLink]="['/department-management']">Management</a>
+        </li>
+        <li *ngIf="dataService.currentUser.role=='Department Head'">
           <a [routerLink]="['/evaluation-head']">Evaluation</a>
         </li>
-        <li>
+        <li *ngIf="dataService.currentUser.role=='Employee'">
           <a [routerLink]="['/course-tracker']">Skills</a>
         </li>
       </ul>
     </aside>
+
+    <div *ngIf="isHomePage" class="description w3-animate-bottom"><p><b>Transform your HR processes with our dynamic Performance Management Portal.</b>
+    </p></div>
+
+    <div *ngIf="isHomePage" class="animation-wrapper">
+      <div class="water">
+        <ul class="waves">
+          <li class="wave-one" style="background-image: url('https://i.postimg.cc/7LtCC11Y/wave1.png');"></li>
+          <li class="wave-two" style="background-image: url('https://i.postimg.cc/P5hv05rh/wave2.png');"></li>
+          <li class="wave-three" style="background-image: url('https://i.postimg.cc/63Dyc91k/wave3.png');"></li>
+          <li class="wave-four" style="background-image: url('https://i.postimg.cc/1tg8DgM0/wave4.png');"></li>
+        </ul>
+      </div>
+      <div class="boat" style="background-image: url('https://i.postimg.cc/GmQTRnHD/boat2.png');"></div>
+      <div class="cloud" style="background-image: url('https://i.postimg.cc/VNkrLZCV/cloud-md.png');"></div>
+      <div class="cloud2" style="background-image: url('https://i.postimg.cc/VNkrLZCV/cloud-md.png');"></div>
+    </div>
 
 <router-outlet></router-outlet>
