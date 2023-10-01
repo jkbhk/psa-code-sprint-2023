@@ -1,0 +1,12 @@
+<div class="department-management">
+    <table class="table is-bordered is-narrow is-hoverable">
+        <tr>
+            <th>Head of IT</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td *ngFor="let em of managed">{{dataService.getUserByEmail(em)?.name}}</td>
+     
+        </tr>
+    </table>
+</div>

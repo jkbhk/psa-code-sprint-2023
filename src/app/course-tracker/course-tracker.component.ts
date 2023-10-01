@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { DataService } from '../data.service';
-import { User } from '../user.model';
 
 @Component({
   selector: 'app-course-tracker',

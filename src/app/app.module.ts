@@ -6,6 +6,7 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EvaluationComponent } from './evaluation/evaluation.component';
 import { CourseTrackerComponent } from './course-tracker/course-tracker.component';
+import { DepartmentManagementComponent } from './department-management/department-management.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { CourseTrackerComponent } from './course-tracker/course-tracker.componen
     routingComponents,
     EvaluationComponent,
     CourseTrackerComponent,
+    DepartmentManagementComponent,
   ],
   imports: [
     BrowserModule,
