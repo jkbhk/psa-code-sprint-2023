@@ -10,7 +10,9 @@ import { User } from './user.model';
 export class AppComponent {
   title = 'hrintel';
 
-  constructor(public dataService:DataService){
-    
+  dataService:DataService
+
+  constructor(dataService:DataService){
+   this.dataService = dataService; 
   }
 }

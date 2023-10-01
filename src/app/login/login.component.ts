@@ -16,6 +16,7 @@ export class LoginComponent {
     let user = this.dataService.getUserByEmail("bob@gmail.com");
     if(user){
       this.dataService.setCurrentUser(user);
+      console.log("after login: " + this.dataService.createUser == undefined);
       window.location.href="/evaluation-head";
     }else{
       alert("invalid user");

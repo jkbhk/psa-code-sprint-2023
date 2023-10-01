@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { DataService } from '../data.service';
 import { User } from '../user.model';
+import { EvaluationTopic } from '../evaluation-topic.model';
 
 @Component({
   selector: 'app-evaluation',
@@ -29,6 +30,17 @@ export class EvaluationComponent {
   }
 
   calculateTotal(){
-    return 999
+    let total = 0;
+    this.selectedUser?.evaluation.topics.forEach((evaltopic:EvaluationTopic, name:string)=>{
+      total += evaltopic.score; 
+    });
+    return total; 
+  }
+  calculateMax(){
+    let total = 0;
+    this.selectedUser?.evaluation.topics.forEach((evaltopic:EvaluationTopic, name:string)=>{
+      total += evaltopic.maxScore; 
+    });
+    return total; 
   }
 }

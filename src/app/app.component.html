@@ -14,7 +14,7 @@
     <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-info" href="/login">
+            <a *ngIf="dataService.currentUser==undefined" class="button is-info" href="/login">
               <strong>Sign in</strong>
             </a>
           </div>
