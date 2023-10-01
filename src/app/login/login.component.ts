@@ -13,11 +13,14 @@ export class LoginComponent {
   }
 
   authenticate(){
+    window.location.href="/evaluation-head";
+  }
+
+  test(){   
     let c = this.dataService.getUserByEmail("charlie@gmail.com")
     if(c != undefined){
       c.evaluation.setScore("Reliability", 99);
       this.dataService.logScores();
     }
-
   }
 }
