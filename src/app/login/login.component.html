@@ -7,10 +7,10 @@
             <div class="row">
                 <div class="col-lg-10 col-xl-7 mx-auto">
                     <h1 class="title is-3">Sign In</h1>
-                    <form>
+                    
                         <div class="field">
                             <div class="control has-icons-left">
-                              <input type="email" placeholder="Email" class="input" required>
+                              <input [(ngModel)]="email_input" type="text" placeholder="Email" class="input" />
                               <span class="icon is-small is-left">
                                 <i class="fa fa-envelope"></i>
                               </span>
@@ -25,7 +25,7 @@
                             </div>
                           </div>
                           <button class="button is-info" (click)="authenticate()">Sign in</button>
-                    </form>
+                    
                 </div>
             </div>
         </div><!-- End -->

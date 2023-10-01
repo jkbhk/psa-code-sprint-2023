@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { DataService } from '../data.service';
 import { User } from '../user.model';
 import { Router, RouterLink } from '@angular/router';
@@ -10,11 +11,15 @@ import { Router, RouterLink } from '@angular/router';
 })
 export class LoginComponent {
 
+  @Input() email_input:string;
+
   constructor(private dataService: DataService, private router:Router){
+    this.email_input = ""
   }
 
   authenticate(){
-    let user = this.dataService.getUserByEmail("bob@gmail.com");
+
+    let user = this.dataService.getUserByEmail(this.email_input!);
     if(user){
       this.dataService.setCurrentUser(user);
       //window.location.href="/evaluation-head";
@@ -22,7 +27,6 @@ export class LoginComponent {
     }else{
       alert("invalid user");
     }
-    //window.location.href="/evaluation-head";
   }
 
   test(){   
