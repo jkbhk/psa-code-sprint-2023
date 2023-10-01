@@ -17,8 +17,6 @@ export class DataService {
     //alert("CRATED")
     this.createUser("Alice","alice@gmail.com","HR");
     this.createUser("Bob","bob@gmail.com","Employee");
-    this.createUser("Charlie","charlie@gmail.com","Department Head");
-
     
     this.createUser("Harry","harry@gmail.com","Employee");
     this.createUser("Jenny","jenny@gmail.com","Employee");
@@ -26,8 +24,10 @@ export class DataService {
     this.createUser("Lily","lily@gmail.com","Employee");
     this.createUser("Mark","mark@gmail.com","Employee");
 
+    // department head
     let charlie = new User("charlie@gmail.com","Charlie","Department Head");
     charlie.managing.push("alice@gmail.com","harry@gmail.com","jenny@gmail.com","kat@gmail.com","lily@gmail.com","mark@gmail.com");
+    this.users.set(charlie.email,charlie);
 
   }
 
