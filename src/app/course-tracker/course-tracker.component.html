@@ -1,0 +1,40 @@
+<div class="courseTracker">
+    <div class="row">
+        <div class="column">
+            <h1 class="title is-4">Team members</h1>
+          <table class="is-bordered is-narrow is-hoverable members" *ngFor="let user of users | keyvalue">
+            <tr>
+              <td class="member">{{user.value.name}}<button> > </button></td>
+            </tr>
+          </table>
+        </div>
+        <div class="column">
+          <table>
+            <tr>
+              <th>Name</th>
+            </tr>
+            <tr>
+              <td>1. Quality of work</td>
+              <td>4/5</td>
+            </tr>
+            <tr>
+              <td>2. Attendance of work</td>
+              <td>5/5</td>
+            </tr>
+            <tr>
+              <td>3. Reliability</td>
+              <td>3/5</td>
+            </tr>
+            <tr>
+                <td>4. Communication skills</td>
+                <td>5/5</td>
+            </tr>
+            <tr>
+                <td>5. Decision-making</td>
+                <td>3/5</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+</div>

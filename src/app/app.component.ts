@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { DataService } from './data.service';
+import { User } from './user.model';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'hrintel';
+
+  constructor(public dataService:DataService){
+    
+  }
 }

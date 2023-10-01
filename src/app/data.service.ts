@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { User } from './user.model';
 import { EvaluationTopic } from './evaluation-topic.model';
+import { Course } from './course.model';
 
 
 @Injectable({
@@ -9,12 +10,17 @@ import { EvaluationTopic } from './evaluation-topic.model';
 export class DataService {
 
   users = new Map<string,User>();
+  currentUser?:User = undefined;
 
   constructor() { 
     // init mock data
     this.createUser("Alice","alice@gmail.com");
     this.createUser("Bob","bob@gmail.com");
     this.createUser("Charlie","charlie@gmail.com");
+  }
+
+  setCurrentUser(user:User){
+    this.currentUser = user;
   }
 
   getAllUsers(){
@@ -34,6 +40,7 @@ export class DataService {
   updateUser(user:User){
     this.users.set(user.email,user);
   }  
+
 
   logScores(){
     this.users.forEach((u: User, email: string) => {
