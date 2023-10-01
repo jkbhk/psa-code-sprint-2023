@@ -3,12 +3,12 @@
   <div class="grades-container">
     <table class="table is-bordered is-narrow">
       <tr>
-        <th>Module</th>
-        <th>Grade</th>
+        <th>Course</th>
+        <th>Status</th>
       </tr>
       <tr *ngFor="let course of courses | keyvalue; let i =index">
-        <!-- <td>{{course.name}}</td>
-        <td>{{course.status}}</td> -->
+        <td>{{course.value.name}}</td>
+        <td>{{course.value.status}}</td>
       </tr>
     </table>
   </div>

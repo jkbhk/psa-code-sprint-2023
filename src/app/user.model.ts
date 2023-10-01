@@ -8,6 +8,7 @@ export class User {
     evaluation: Evaluation;
     courses: Map<string, Course>
     role: string;
+    managing: string[]
 
     constructor(email:string, name:string, role:string){
         this.email = email;
@@ -16,6 +17,7 @@ export class User {
         this.evaluation = new Evaluation();
         this.courses = new Map<string, Course>();
         this.role = role
+        this.managing = []
 
         this.courses.set("Basic Java",new Course("Basic Java"));
         this.courses.set("Basic C#",new Course("Basic C#"));
